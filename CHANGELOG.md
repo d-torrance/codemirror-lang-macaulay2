@@ -5,4 +5,5 @@ version 0.1.1
 
 version 0.1.0
 -------------
+* Release date: 2025-02-25
 * Initial release
