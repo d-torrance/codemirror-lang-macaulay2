@@ -34,5 +34,6 @@
     "serve": "^14.2.4",
     "typescript": "^4.3.4"
   },
+  "keywords": ["codemirror", "language", "macaulay2"],
   "license": "MIT"
 }
