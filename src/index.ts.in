@@ -1,0 +1,30 @@
+import { StreamLanguage } from "@codemirror/language";
+import { simpleMode } from "@codemirror/legacy-modes/mode/simple-mode";
+
+// @M2BANNER@
+
+const Macaulay2Mode = simpleMode({
+  start: [
+    {regex: /"(?:[^\\]|\\.)*?(?:"|$)/, token: "string"},
+    {regex: /(then|do|list|in|break|continue|not|and|or|return)\b/, token: "keyword"},
+    {regex: /(from|to)\b/, token: "builtin"},
+    {regex: /(true|false|null)\b/, token: "atom"},
+    {regex: /(for|while|if|else)\b/, token: "keyword", indent: true},
+
+    {regex: /(@M2KEYWORDS@)\b/,
+     token: "keyword"},
+    {regex: /(@M2DATATYPES@)\b/,
+     token: "tag"},
+    {regex: /(@M2FUNCTIONS@)\b/,
+     token: "def"},
+
+    {regex: /0x[a-f\d]+|[-+]?(?:\.\d+|\d+\.?\d*)(?:e[-+]?\d+)?/i, token: "number"},
+    {regex: /[\{\[\(]/, indent: true},
+    {regex: /[\}\]\);]/, dedent: true},
+    {regex: /[a-z$][\w$]*/, token: "variable"},
+    {regex: /^\s*--%.*/, token: "comment meta"},
+    {regex: /--.*/, token: "comment"},
+  ]
+});
+
+export const macaulay2 = () => StreamLanguage.define(Macaulay2Mode);
