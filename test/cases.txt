@@ -1,20 +1,20 @@
 # Booleans
 
-#t
-#f
+true
+false
 
 ==>
 
-Program(Boolean, Boolean)
+Document(atom,atom)
 
 # Identifiers
 
 one
-Two_Three
+twoThree
 
 ==>
 
-Program(Identifier, Identifier)
+Document(variableName,variableName)
 
 # Strings
 
@@ -23,19 +23,13 @@ Program(Identifier, Identifier)
 
 ==>
 
-Program(String, String)
+Document(string,string)
 
 # Applications
 
-(begin
-  (when #t
-    (print (concat "hello" " " "world")))
-  (print "DONE"))
+if true then print "hello" | " " | "world"
+print "DONE"
 
 ==>
 
-Program(Application(
-  Identifier,
-  Application(Identifier, Boolean, Application(
-    Identifier, Application(Identifier, String, String, String)))
-  Application(Identifier, String)))
+Document(keyword,atom,keyword,"variableName.definition",string,string,string,"variableName.definition",string)
