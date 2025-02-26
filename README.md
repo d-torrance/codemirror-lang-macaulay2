@@ -1,21 +1,24 @@
-# CodeMirror 6 language package template
+# Macaulay2 Language for CodeMirror
 
-This is an example repository containing a minimal [CodeMirror](https://codemirror.net/6/) language support package. The idea is to clone it, rename it, and edit it to create support for a new language.
+This package provides [Macaulay2](https://macaulay2.com) language support for
+[CodeMirror](https://codemirror.net/).
 
-Things you'll need to do (see the [language support example](https://codemirror.net/6/examples/lang-package/) for a more detailed tutorial):
+## Installation
+```bash
+npm install codemirror-lang-macaulay2
+```
 
- * `git grep EXAMPLE` and replace all instances with your language name.
+## Usage
+```js
+import { EditorState } from "@codemirror/state";
+import { EditorView, basicSetup } from "codemirror";
+import { macaulay2 } from "codemirror-lang-macaulay2";
 
- * Rewrite the grammar in `src/syntax.grammar` to cover your language. See the [Lezer system guide](https://lezer.codemirror.net/docs/guide/#writing-a-grammar) for information on this file format.
-
- * Adjust the metadata in `src/index.ts` to work with your new grammar.
-
- * Adjust the grammar tests in `test/cases.txt`.
-
- * Build (`npm run prepare`) and test (`npm test`).
-
- * Rewrite this readme file.
-
- * Optionally add a license.
-
- * Publish. Put your package on npm under a name like `codemirror-lang-EXAMPLE`.
+new EditorView({
+  state: EditorState.create({
+    doc: "R = QQ[x,y,z,w]\nI = monomialCurveIdeal(R, {1,2,3})",
+    extensions: [basicSetup, macaulay2()]
+  }),
+  parent: document.getElementById("editor"),
+});
+```
