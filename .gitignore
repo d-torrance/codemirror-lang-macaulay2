@@ -1,5 +1,7 @@
-/node_modules
-package-lock.json
+**/*~
+/demo/bundle.js*
 /dist
-/src/*.js
+/node_modules
 /src/*.d.ts
+/src/*.js
+package-lock.json
