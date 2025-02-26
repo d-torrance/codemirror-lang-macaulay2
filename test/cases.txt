@@ -27,7 +27,7 @@ Document(string,string)
 
 # Applications
 
-if true then print "hello" | " " | "world"
+if true then print("hello" | " " | "world")
 print "DONE"
 
 ==>
