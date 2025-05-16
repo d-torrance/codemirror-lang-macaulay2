@@ -26,7 +26,8 @@
   "scripts": {
     "test": "mocha test/test.js",
     "prepare": "rollup -c",
-    "demo": "npm run prepare && rollup -c demo-rollup.config.js && serve demo"
+    "demo": "npm run prepare && rollup -c demo-rollup.config.js && serve demo",
+    "update": "M2 --script generate-grammar.m2"
   },
   "dependencies": {
     "@codemirror/language": "^6.0.0",
