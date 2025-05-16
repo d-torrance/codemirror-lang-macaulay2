@@ -6,11 +6,8 @@ import { simpleMode } from "@codemirror/legacy-modes/mode/simple-mode";
 const Macaulay2Mode = simpleMode({
   start: [
     {regex: /"(?:[^\\]|\\.)*?(?:"|$)/, token: "string"},
-    {regex: /(then|do|list|in|break|continue|not|and|or|return)\b/, token: "keyword"},
-    {regex: /(from|to)\b/, token: "builtin"},
-    {regex: /(true|false|null)\b/, token: "atom"},
-    {regex: /(for|while|if|else)\b/, token: "keyword", indent: true},
-
+    {regex: /(@M2CONSTANTS@)\b/,
+     token: "atom"},
     {regex: /(@M2KEYWORDS@)\b/,
      token: "keyword"},
     {regex: /(@M2DATATYPES@)\b/,
