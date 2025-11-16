@@ -1,6 +1,6 @@
 {
   "name": "codemirror-lang-macaulay2",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Macaulay2 language support for CodeMirror",
   "keywords": ["codemirror", "language", "macaulay2"],
   "author": "Doug Torrance",
