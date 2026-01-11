@@ -30,12 +30,14 @@
     "dist/"
   ],
   "scripts": {
-    "test": "mocha test/test.js",
-    "prepare": "rollup -c",
-    "demo": "npm run prepare && rollup -c demo-rollup.config.js && serve demo",
+    "test": "make check",
+    "build": "make",
+    "prepack": "make",
+    "demo": "make demo && serve demo",
     "update": "M2 --script generate-grammar.m2",
     "format": "prettier --write .",
-    "lint": "prettylint . && eslint ."
+    "lint": "prettylint . && eslint .",
+    "clean": "make clean"
   },
   "dependencies": {
     "@codemirror/language": "^6.0.0",
