@@ -9,12 +9,15 @@ let caseDir = path.dirname(fileURLToPath(import.meta.url));
 for (let file of fs.readdirSync(caseDir)) {
   if (!/\.txt$/.test(file)) continue;
 
-  let name = /^[^\.]*/.exec(file)[0];
-  describe(name, () => {
+  let name = /^[^.]*/.exec(file)[0];
+
+  describe(name, function () {
     for (let { name, run } of fileTests(
       fs.readFileSync(path.join(caseDir, file), "utf8"),
       file,
     ))
-      it(name, () => run(macaulay2().parser));
+      it(name, function () {
+        run(macaulay2().parser);
+      });
   });
 }
