@@ -1,3 +1,9 @@
+## version 0.2.2
+
+- Release date: 2026-01-11
+- Switch to @rollup/plugin-typescript
+- Add eslint & prettier support
+
 ## version 0.2.1
 
 - Release date: 2025-11-16
