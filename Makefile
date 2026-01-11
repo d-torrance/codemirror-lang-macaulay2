@@ -1,6 +1,6 @@
 all: dist/index.cjs dist/index.d.ts dist/index.js
 
-dist/%: src/index.ts.in
+dist/%: src/index.ts
 	rollup -c
 
 demo: all demo/bundle.js demo/bundle.js.map
