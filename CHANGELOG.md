@@ -1,4 +1,5 @@
 ## version 0.2.3
+
 - Release date: 2026-01-11
 - Update template so it generates code that prettier accepts
 
