@@ -16,7 +16,8 @@ npm install codemirror-lang-macaulay2
 
 ```js
 import { EditorState } from "@codemirror/state";
-import { EditorView, basicSetup } from "codemirror";
+import { EditorView } from "@codemirror/view";
+import { basicSetup } from "codemirror";
 import { macaulay2 } from "codemirror-lang-macaulay2";
 
 new EditorView({
