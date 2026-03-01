@@ -1,3 +1,8 @@
+## version 0.2.4
+
+- Release date: 2026-03-01
+- Simplify dependencies
+
 ## version 0.2.3
 
 - Release date: 2026-01-11
