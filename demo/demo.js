@@ -1,5 +1,6 @@
 import { EditorState } from "@codemirror/state";
-import { EditorView, basicSetup } from "codemirror";
+import { EditorView } from "@codemirror/view";
+import { basicSetup } from "codemirror";
 import { macaulay2 } from "../dist/index.js";
 
 new EditorView({
