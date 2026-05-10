@@ -1,6 +1,6 @@
 {
   "name": "codemirror-lang-macaulay2",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Macaulay2 language support for CodeMirror",
   "keywords": [
     "codemirror",
