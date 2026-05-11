@@ -1,3 +1,5 @@
+import typescript from "@rollup/plugin-typescript";
+
 export default {
   input: "src/index.ts",
   external: (id) => id != "tslib" && !/^(\.?\/|\w:)/.test(id),
@@ -5,4 +7,5 @@ export default {
     { file: "dist/index.cjs", format: "cjs" },
     { dir: "./dist", format: "es" },
   ],
+  plugins: [typescript()],
 };
