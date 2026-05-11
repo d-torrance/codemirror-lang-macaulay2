@@ -1,3 +1,8 @@
+## version 0.2.6
+
+- Release date: 2026-05-11
+- Use @rollup/plugin-typescript again to generate declarations file.
+
 ## version 0.2.5
 
 - Release date: 2026-05-10
