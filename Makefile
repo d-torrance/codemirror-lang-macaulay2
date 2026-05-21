@@ -1,6 +1,7 @@
-all: dist/index.cjs dist/index.d.ts dist/index.js
+all: dist/index.cjs dist/index.d.ts dist/index.js \
+     dist/legacy/macaulay2.js dist/legacy/macaulay2.cjs dist/legacy/macaulay2.d.ts
 
-dist/%: src/index.ts
+dist/%: src/grammar.ts src/index.ts src/legacy/macaulay2.ts
 	rollup -c
 
 demo: all demo/bundle.js demo/bundle.js.map

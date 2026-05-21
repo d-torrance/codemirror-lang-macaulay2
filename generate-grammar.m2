@@ -1,3 +1,3 @@
 needsPackage "Style"
 
-generateGrammar("src/index.ts", demark_"|")
+generateGrammar("src/grammar.ts", demark_"|")

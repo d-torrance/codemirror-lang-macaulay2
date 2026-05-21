@@ -22,8 +22,22 @@
   "types": "dist/index.d.ts",
   "type": "module",
   "exports": {
-    "import": "./dist/index.js",
-    "require": "./dist/index.cjs"
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./legacy/macaulay2": {
+      "import": "./dist/legacy/macaulay2.js",
+      "require": "./dist/legacy/macaulay2.cjs"
+    }
+  },
+  "peerDependencies": {
+    "codemirror": "^5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "codemirror": {
+      "optional": true
+    }
   },
   "sideEffects": false,
   "files": [
