@@ -26,9 +26,9 @@
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./legacy/macaulay2": {
-      "import": "./dist/legacy/macaulay2.js",
-      "require": "./dist/legacy/macaulay2.cjs"
+    "./legacy": {
+      "import": "./dist/legacy/index.js",
+      "require": "./dist/legacy/index.cjs"
     }
   },
   "peerDependencies": {

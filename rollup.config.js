@@ -13,11 +13,11 @@ export default [
     plugins: [typescript()],
   },
   {
-    input: "src/legacy/macaulay2.ts",
+    input: "src/legacy/index.ts",
     external,
     output: [
-      { file: "dist/legacy/macaulay2.js", format: "es" },
-      { file: "dist/legacy/macaulay2.cjs", format: "cjs" },
+      { file: "dist/legacy/index.js", format: "es" },
+      { file: "dist/legacy/index.cjs", format: "cjs" },
     ],
     plugins: [
       typescript({ outDir: "dist/legacy", declarationDir: "dist/legacy" }),
