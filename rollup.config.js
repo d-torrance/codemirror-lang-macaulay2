@@ -1,6 +1,6 @@
 import typescript from "@rollup/plugin-typescript";
 
-const external = (id) => id != "tslib" && !/^(\.\.?\/|\w:)/.test(id);
+const external = (id) => id != "tslib" && !/^(\.\.?\/|\/|\w:)/.test(id);
 
 export default [
   {
@@ -8,9 +8,9 @@ export default [
     external,
     output: [
       { file: "dist/index.cjs", format: "cjs" },
-      { dir: "./dist", format: "es" },
+      { file: "dist/index.js", format: "es" },
     ],
-    plugins: [typescript()],
+    plugins: [typescript({ declarationDir: "dist" })],
   },
   {
     input: "src/legacy/index.ts",
