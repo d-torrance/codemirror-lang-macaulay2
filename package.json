@@ -44,14 +44,14 @@
     "dist/"
   ],
   "scripts": {
-    "test": "make check",
-    "build": "make",
-    "prepack": "make",
-    "demo": "make demo && serve demo",
+    "test": "mocha test/test.js",
+    "build": "rollup -c",
+    "prepack": "npm run build",
+    "demo": "rollup -c demo-rollup.config.js && serve demo",
     "update": "M2 --script generate-grammar.m2",
     "format": "prettier --write .",
     "lint": "prettylint . && eslint .",
-    "clean": "make clean"
+    "clean": "rm -rf demo/bundle.js* dist"
   },
   "dependencies": {
     "@codemirror/language": "^6.0.0",
