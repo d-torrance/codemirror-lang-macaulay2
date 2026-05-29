@@ -1,6 +1,6 @@
 import typescript from "@rollup/plugin-typescript";
 
-const external = (id) => id != "tslib" && !/^(\.?\/|\w:)/.test(id);
+const external = (id) => id != "tslib" && !/^(\.\.?\/|\w:)/.test(id);
 
 export default [
   {
