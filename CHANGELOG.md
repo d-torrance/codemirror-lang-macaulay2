@@ -1,3 +1,8 @@
+## version 0.3.0
+
+- Release date: 2026-05-29
+- Distribute legacy CodeMirror 5 module
+
 ## version 0.2.6
 
 - Release date: 2026-05-11
