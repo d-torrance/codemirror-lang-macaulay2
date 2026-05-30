@@ -39,7 +39,10 @@
       "optional": true
     }
   },
-  "sideEffects": false,
+  "sideEffects": [
+    "./dist/legacy/index.js",
+    "./dist/legacy/index.cjs"
+  ],
   "files": [
     "dist/"
   ],
