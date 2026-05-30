@@ -14,6 +14,8 @@ npm install codemirror-lang-macaulay2
 
 ## Usage
 
+### CodeMirror 6
+
 ```js
 import { EditorState } from "@codemirror/state";
 import { EditorView } from "@codemirror/view";
@@ -26,5 +28,20 @@ new EditorView({
     extensions: [basicSetup, macaulay2()],
   }),
   parent: document.getElementById("editor"),
+});
+```
+
+### CodeMirror 5 (legacy)
+
+Import the legacy subpath to automatically register the `macaulay2` mode with
+CodeMirror.
+
+```js
+import CodeMirror from "codemirror";
+import "codemirror/addon/mode/simple";
+import "codemirror-lang-macaulay2/legacy";
+
+const editor = CodeMirror.fromTextArea(document.getElementById("editor"), {
+  mode: "macaulay2",
 });
 ```
