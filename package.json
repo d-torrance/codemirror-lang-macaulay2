@@ -1,6 +1,6 @@
 {
   "name": "codemirror-lang-macaulay2",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Macaulay2 language support for CodeMirror",
   "keywords": [
     "codemirror",
@@ -74,7 +74,7 @@
     "eslint-plugin-mocha": "^11.2.0",
     "globals": "^17.0.0",
     "jiti": "^2.6.1",
-    "mocha": "^11.7.5",
+    "mocha": "^11.4.0",
     "prettier": "^3.7.4",
     "prettylint": "^2.0.0",
     "rollup": "^2.60.2",

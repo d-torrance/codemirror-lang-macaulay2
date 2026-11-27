@@ -1,3 +1,8 @@
+## version 0.3.2
+
+- Release date: 2026-11-27
+- Update symbols for Macaulay2 1.26.11
+
 ## version 0.3.1
 
 - Release date: 2026-06-10
